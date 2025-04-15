@@ -1,62 +1,76 @@
-```markdown
+---
+
 # Projeto Web Monólito em Java - Avaliação de Cursos EAD
 
-Este projeto tem como objetivo desenvolver uma aplicação web monolítica, utilizando Java, para permitir a avaliação de cursos de graduação a distância (EAD). A plataforma visa fornecer um espaço onde os alunos possam compartilhar suas experiências e avaliar a qualidade dos cursos oferecidos por diferentes instituições de ensino superior.
+Este projeto tem como objetivo o desenvolvimento de uma aplicação web monolítica em Java para **avaliação de cursos de graduação EAD (Educação a Distância)**. A plataforma permitirá que alunos avaliem suas instituições de ensino com base em critérios como qualidade do conteúdo, professores, apoio ao aluno, material didático e funcionamento do polo presencial.
 
-## 🧩 Funcionalidades
+## ✨ Funcionalidades
 
-- Cadastro de cursos e instituições de ensino
-- Avaliação de cursos por alunos (com critérios como: qualidade do conteúdo, professores, apoio ao aluno, estrutura do polo e material didático)
-- Registro obrigatório de nome, R.A., universidade e curso para garantir veracidade das avaliações
-- Cálculo de médias por critério e geral para cada curso
-- Listagem e ranking dos cursos melhor avaliados
+- Cadastro de usuários com validação por R.A. (Registro Acadêmico)
+- Cadastro de universidades, cursos e polos EAD
+- Avaliação de cursos com base nos seguintes critérios:
+  - Qualidade do conteúdo
+  - Qualidade dos professores
+  - Apoio nos estudos
+  - Material didático
+  - Infraestrutura do polo
+- Exibição de médias por curso, universidade e polo
+- Filtro por instituição e área de formação
+- Área administrativa para moderação de avaliações
 
 ## 🛠️ Tecnologias Utilizadas
 
 - **Java 21**
-- **Spring Boot** (opcional, dependendo da implementação)
-- **Hibernate OGM com MongoDB**
-- **HTML/CSS/JavaScript** para a interface
-- **Maven** para gerenciamento de dependências
-- **IntelliJ IDEA** como ambiente de desenvolvimento
+- **Spring Boot** (caso esteja usando, ou especifique o framework MVC se for puro Java EE)
+- **Hibernate OGM** com MongoDB
+- **Thymeleaf** (caso esteja usando para renderizar o front-end)
+- **Maven**
+- **IntelliJ IDEA**
+- **MongoDB**
 
 ## 📁 Estrutura do Projeto
 
 ```
-Mod39/
-└── curso-ranking/
-    ├── src/
-    ├── README.md
-    ├── pom.xml
-    └── ...
+src/
+├── main/
+│   ├── java/
+│   │   └── br.com.seuprojeto/
+│   │       ├── controller/
+│   │       ├── model/
+│   │       ├── repository/
+│   │       └── service/
+│   └── resources/
+│       ├── templates/
+│       ├── static/
+│       └── application.properties
+└── test/
 ```
 
 ## 🚀 Como Executar
 
 1. Clone o repositório:
+   ```bash
+   git clone https://github.com/seuusuario/nome-do-repositorio.git
+   cd nome-do-repositorio
+   ```
 
-```bash
-git clone https://github.com/dionatandiego11/tarefas-ebac-Dionatan.git
-cd tarefas-ebac-Dionatan/Mod39/curso-ranking
-```
+2. Configure o banco de dados MongoDB no arquivo `application.properties` ou `persistence.xml`.
 
-2. Compile e execute com o Maven:
+3. Execute o projeto com seu IDE favorita ou via linha de comando:
+   ```bash
+   ./mvnw spring-boot:run
+   ```
 
-```bash
-mvn clean install
-mvn spring-boot:run
-```
+4. Acesse a aplicação em: `http://localhost:8080`
 
-3. Acesse a aplicação no navegador:
+## 📌 Requisitos
 
-```
-http://localhost:8080
-```
+- Java 21+
+- Maven
+- MongoDB em execução local ou remoto
 
-## 📌 Observações
+## 📄 Licença
 
-Este projeto é um protótipo acadêmico com fins educacionais. Todas as informações inseridas devem ser verificadas antes de uso em produção.
+Este projeto está licenciado sob a [MIT License](LICENSE).
 
 ---
-**Autor:** Dionatan Diego  
-```
